@@ -3,7 +3,7 @@
 // Import our API configuration
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
 
 // Cache to prevent multiple identical requests
 const requestCache = {

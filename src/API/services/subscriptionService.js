@@ -241,7 +241,7 @@ const subscriptionService = {
       }
 
       // Thử gọi trực tiếp để debug
-      const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
+      const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -307,7 +307,7 @@ const subscriptionService = {
         return 0;
       }
 
-      const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-count', {
+      const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-count', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

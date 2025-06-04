@@ -57,7 +57,7 @@ const ReportDetailPage = () => {
       }
 
       const response = await axios.get(
-        `http://https://movie-streaming-v2-be.onrender.com/api/admin/reports/${reportId}`,
+        `https://movie-streaming-v2-be.onrender.com/api/admin/reports/${reportId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -87,7 +87,7 @@ const ReportDetailPage = () => {
       if (!token) return;
 
       const response = await axios.patch(
-        `http://https://movie-streaming-v2-be.onrender.com/api/admin/reports/${id}`,
+        `https://movie-streaming-v2-be.onrender.com/api/admin/reports/${id}`,
         {
           status,
           adminNotes: adminNote
@@ -120,7 +120,7 @@ const ReportDetailPage = () => {
         if (!token) return;
 
         const response = await axios.delete(
-          `http://https://movie-streaming-v2-be.onrender.com/api/admin/reports/${id}`,
+          `https://movie-streaming-v2-be.onrender.com/api/admin/reports/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

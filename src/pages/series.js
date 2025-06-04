@@ -239,7 +239,7 @@ const Series = () => {
       console.log('Fetching series with params:', queryParams);
 
       // Fetch TV series (Phim Bộ) using the backend API with appropriate type parameter
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await fetch(
         `${apiUrl}/movies?${queryParams}`
       );

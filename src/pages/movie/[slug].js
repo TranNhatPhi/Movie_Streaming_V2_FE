@@ -541,7 +541,7 @@ const MovieDetail = ({ slug: slugProp }) => {
     previewTimeoutRef.current = setTimeout(async () => {
       if (!movie.episodes || !movie.episodes.length) {
         try {
-          const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies${movie.slug}`);
+          const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies${movie.slug}`);
           const data = await response.json();
 
           if (data.status && data.movie && data.episodes && data.episodes.length > 0) {
@@ -782,7 +782,7 @@ const MovieDetail = ({ slug: slugProp }) => {
         setContentLoaded(false);
 
         // Fetch movie data from API
-        const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies/${slug}`);
+        const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies/${slug}`);
 
         if (!response.ok) {
           throw new Error(`API responded with status: ${response.status}`);
@@ -825,7 +825,7 @@ const MovieDetail = ({ slug: slugProp }) => {
               console.log("Searching for movies with similar names:", mainMovieName);
 
               // Search for movies with similar names
-              const similarNameResponse = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/search?q=${encodeURIComponent(mainMovieName)}&size=8`);
+              const similarNameResponse = await fetch(`https://movie-streaming-v2-be.onrender.com/api/search?q=${encodeURIComponent(mainMovieName)}&size=8`);
               const similarNameResult = await similarNameResponse.json();
               console.log("Similar name search result:", similarNameResult);
 
@@ -859,7 +859,7 @@ const MovieDetail = ({ slug: slugProp }) => {
               }
 
               // Fetch related movies by category
-              const relatedResponse = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies?category=${encodeURIComponent(categoryName)}&limit=20`);
+              const relatedResponse = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies?category=${encodeURIComponent(categoryName)}&limit=20`);
               const relatedResult = await relatedResponse.json();
 
               if (relatedResult.data && relatedResult.data.movies) {
@@ -933,7 +933,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       try {
         console.log("Fetching ratings stats for movie slug:", slug);
         // Use fetch to avoid any issues with axiosInstance
-        const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/ratings/stats/${slug}`);
+        const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/ratings/stats/${slug}`);
 
         if (!response.ok) {
           throw new Error(`Failed to fetch rating stats: ${response.status}`);
@@ -1263,7 +1263,7 @@ const MovieDetail = ({ slug: slugProp }) => {
 
       // Gửi báo cáo đến API endpoint
       const response = await axios.post(
-        'http://https://movie-streaming-v2-be.onrender.com/api/reports/movie',
+        'https://movie-streaming-v2-be.onrender.com/api/reports/movie',
         reportData,
         {
           headers: {
@@ -1306,7 +1306,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       });
 
       // Use direct fetch with the full URL to avoid any path issues with axiosInstance
-      const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/ratings', {
+      const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/ratings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1364,7 +1364,7 @@ const MovieDetail = ({ slug: slugProp }) => {
     try {
       console.log("Fetching ratings stats for movie slug:", slug);
       // Use fetch to avoid any issues with axiosInstance
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/ratings/stats/${slug}`);
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/ratings/stats/${slug}`);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch rating stats: ${response.status}`);
@@ -1431,7 +1431,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       }
 
       console.log("Making request to get user rating with user ID:", currentUser._id);
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/ratings/user/${currentUser._id}/movie/${slug}`, {
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/ratings/user/${currentUser._id}/movie/${slug}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -1780,7 +1780,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       if (token) {
         // Nếu có token, kiểm tra quyền lợi từ API trước khi hiển thị quảng cáo
         try {
-          const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/subscription/ad-benefits', {
+          const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/subscription/ad-benefits', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -1934,7 +1934,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       }
 
       // Gọi API để toggle like - sử dụng API mới
-      const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/likes', {
+      const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/likes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1988,7 +1988,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       }
 
       // Gọi API để toggle dislike - sử dụng API mới
-      const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/likes', {
+      const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/likes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -2150,7 +2150,7 @@ const MovieDetail = ({ slug: slugProp }) => {
 
     // Handle relative paths for local avatars
     if (avatarUrl && avatarUrl.startsWith('/')) {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const baseWithoutApi = baseUrl.endsWith('/api')
         ? baseUrl.substring(0, baseUrl.length - 4)
         : baseUrl;
@@ -2263,7 +2263,7 @@ const MovieDetail = ({ slug: slugProp }) => {
       // Fetch movies from each top category
       for (const category of topCategories) {
         try {
-          const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies?category=${encodeURIComponent(category)}&limit=15`);
+          const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies?category=${encodeURIComponent(category)}&limit=15`);
 
           if (response.ok) {
             const result = await response.json();

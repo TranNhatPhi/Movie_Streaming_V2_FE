@@ -19,14 +19,14 @@ const MovieList = () => {
   const [showModal, setShowModal] = useState(false);
 
   const fetchMovieDetail = async (slug) => {
-    const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies/${movie.slug}`);
+    const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies/${movie.slug}`);
     const data = await response.json();
     return data.movie;
   };
 
   const fetchMoviesForCategory = async (endpoint, categoryId) => {
     try {
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies/${movie.slug}`);
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies/${movie.slug}`);
       const data = await response.json();
 
       if (data.items) {

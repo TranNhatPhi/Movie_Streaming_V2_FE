@@ -116,7 +116,7 @@ const Moviecountry = () => {
       }));
 
       // Gọi API để lấy tất cả phim (hoặc có thể thêm filter phía server nếu hỗ trợ)
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies?page=1&limit=100`);
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies?page=1&limit=100`);
       const result = await response.json();
 
       if (result.data?.movies) {

@@ -61,7 +61,7 @@ const favoritesService = {
       // Thử sử dụng phương thức thay thế với fetch API
       try {
         console.log('[SERVICE] Thử sử dụng fetch API');
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
 
         // Lấy token từ localStorage
         const token = localStorage.getItem('auth_token') || localStorage.getItem('token');
@@ -203,7 +203,7 @@ const favoritesService = {
       }
 
       // Lấy API URL từ biến môi trường hoặc sử dụng giá trị mặc định
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const favoritesUrl = `${apiUrl}/favorites`;
 
       console.log('Gọi API trực tiếp tới URL:', favoritesUrl);

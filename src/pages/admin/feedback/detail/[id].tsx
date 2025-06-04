@@ -69,7 +69,7 @@ const FeedbackDetailPage = () => {
           return;
         }
 
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
         const response = await axios.get(`${baseUrl}/feedback/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -101,7 +101,7 @@ const FeedbackDetailPage = () => {
         const token = localStorage.getItem('auth_token');
         if (!token) return;
 
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
         await axios.patch(`${baseUrl}/feedback/${id}/read`, {}, {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -188,7 +188,7 @@ const FeedbackDetailPage = () => {
         router.push('/auth/login');
         return;
       }
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const res = await axios.patch(`${baseUrl}/feedback/${id}`, {
         adminResponse: response,
         status: responseStatus
@@ -246,7 +246,7 @@ const FeedbackDetailPage = () => {
         return;
       }
 
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const res = await axios.delete(`${baseUrl}/feedback/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -67,7 +67,7 @@ const FeedbackForm = forwardRef(({ isOpen, onClose }, ref) => {
         submitData.user = user._id; // Gắn user ID nếu người dùng đã đăng nhập
       }
 
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await axios.post(`${baseUrl}/feedback`, submitData, {
         headers: {
           'Content-Type': 'application/json',

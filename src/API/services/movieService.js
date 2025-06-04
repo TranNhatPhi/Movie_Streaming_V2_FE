@@ -1,6 +1,6 @@
 // Movie Service API functions
 
-const API_URL = "http://https://movie-streaming-v2-be.onrender.com/api"; // Update this with your actual API URL
+const API_URL = "https://movie-streaming-v2-be.onrender.com/api"; // Update this with your actual API URL
 
 const movieService = {
   // Get latest movies

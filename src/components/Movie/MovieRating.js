@@ -6,7 +6,7 @@ const MovieRating = ({ movieId }) => {
 
   const handleSubmit = async () => {
     try {
-      await fetch('http://https://movie-streaming-v2-be.onrender.com/api/movies/rate', {
+      await fetch('https://movie-streaming-v2-be.onrender.com/api/movies/rate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

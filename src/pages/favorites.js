@@ -47,7 +47,7 @@ export default function FavoritesPage({ inProfilePage = false }) {
         return;
       }
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       console.log('Calling API at:', `${apiUrl}/favorites`);
 
       const response = await fetch(`${apiUrl}/favorites`, {

@@ -14,7 +14,7 @@ const logDetailedError = (error) => {
     // Kiểm tra nếu đây là lỗi từ fetch API
     if (error.name === 'TypeError' && error.message.includes('fetch')) {
         console.error('Network error detected. API server might be down or URL is incorrect.');
-        console.error('API_URL being used:', process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api');
+        console.error('API_URL being used:', process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api');
     }
 
     // Kiểm tra nếu đây là lỗi từ JSON parsing
@@ -90,13 +90,13 @@ export default function Login() {
 
                 if (apiError.message.includes('Failed to fetch')) {
                     setError('Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối mạng và cài đặt API.');
-                    setDebugInfo(`Backend server có thể chưa khởi động. Hãy đảm bảo server đang chạy ở ${process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api'}`);
+                    setDebugInfo(`Backend server có thể chưa khởi động. Hãy đảm bảo server đang chạy ở ${process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api'}`);
                 } else if (apiError.message.includes('<!DOCTYPE') || apiError.message.includes('Unexpected token')) {
                     setError('Lỗi kết nối máy chủ: Máy chủ trả về HTML thay vì JSON.');
-                    setDebugInfo(`API URL không chính xác hoặc server trả về trang lỗi. URL hiện tại: ${process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api'}`);
+                    setDebugInfo(`API URL không chính xác hoặc server trả về trang lỗi. URL hiện tại: ${process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api'}`);
                 } else {
                     setError(apiError.message || 'Đăng nhập thất bại');
-                    setDebugInfo(`Lỗi: ${apiError.message}\nAPI URL: ${process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api'}`);
+                    setDebugInfo(`Lỗi: ${apiError.message}\nAPI URL: ${process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api'}`);
                 }
             }
         } catch (error) {

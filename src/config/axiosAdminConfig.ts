@@ -1,7 +1,7 @@
 // src/config/axiosAdminConfig.ts
 import axios from 'axios';
 
-const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+const baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
 
 // Create axios instance with base configuration for admin routes
 const axiosInstance = axios.create({

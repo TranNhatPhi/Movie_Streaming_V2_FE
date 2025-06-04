@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ message: 'Password must be at least 6 characters long' });
     }    // Send request to backend API using axios
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api'}/auth/reset-password`,
+      `${process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api'}/auth/reset-password`,
       {
         token,
         newPassword,

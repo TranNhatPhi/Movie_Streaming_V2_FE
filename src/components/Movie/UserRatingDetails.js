@@ -22,7 +22,7 @@ const UserRatingDetails = ({ movieSlug }) => {
         setError(null);
 
         // Define base API URL once for consistency
-        const baseApiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+        const baseApiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
 
         // Step 1: Fetch movie ID from slug
         const movieResponse = await fetch(`${baseApiUrl}/movies/${movieSlug}`);
@@ -123,7 +123,7 @@ const UserRatingDetails = ({ movieSlug }) => {
 
     // Convert relative paths to absolute URLs
     if (avatarUrl && avatarUrl.startsWith('/')) {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       // Remove /api part if it exists in baseUrl
       const baseWithoutApi = baseUrl.endsWith('/api')
         ? baseUrl.substring(0, baseUrl.length - 4)

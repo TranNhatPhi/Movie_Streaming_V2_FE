@@ -1,6 +1,6 @@
 import authService from './authService';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://https://movie-streaming-v2-be.onrender.com/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://movie-streaming-v2-be.onrender.com/api";
 
 const watchlistService = {
   // Get watchlist for current user

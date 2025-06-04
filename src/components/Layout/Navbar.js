@@ -14,7 +14,7 @@ const getAvatarUrl = (user) => {
 
   // Handle relative paths for local avatars
   if (avatarUrl && avatarUrl.startsWith('/')) {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
     const baseWithoutApi = baseUrl.endsWith('/api')
       ? baseUrl.substring(0, baseUrl.length - 4)
       : baseUrl;

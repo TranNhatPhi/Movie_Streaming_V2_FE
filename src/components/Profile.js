@@ -302,7 +302,7 @@ export default function ProfilePage() {
         // Process avatar URL properly based on its format
         if (avatarUrl && avatarUrl.startsWith('/')) {
           // For relative paths (local uploads), prepend the base URL
-          const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+          const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
           // Loại bỏ phần /api nếu đã có trong baseUrl
           const baseWithoutApi = baseUrl.endsWith('/api')
             ? baseUrl.substring(0, baseUrl.length - 4)

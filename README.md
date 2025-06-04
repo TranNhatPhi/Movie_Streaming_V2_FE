@@ -114,7 +114,7 @@ npm install
 
 **Cấu hình file .env.local cho Frontend:**
 ```env
-NEXT_PUBLIC_API_URL=http://https://movie-streaming-v2-be.onrender.com/api
+NEXT_PUBLIC_API_URL=https://movie-streaming-v2-be.onrender.com/api
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloudinary_name
 
 # TMDB API (for actor/movie info)
@@ -142,7 +142,7 @@ npm run build && npm start  # Production mode
 **Truy cập ứng dụng:**
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend API: [http://https://movie-streaming-v2-be.onrender.com](http://https://movie-streaming-v2-be.onrender.com)
-- API Documentation: [http://https://movie-streaming-v2-be.onrender.com/api-docs](http://https://movie-streaming-v2-be.onrender.com/api-docs)
+- API Documentation: [https://movie-streaming-v2-be.onrender.com/api-docs](https://movie-streaming-v2-be.onrender.com/api-docs)
 
 ## 🎯 Tính năng chính
 
@@ -252,7 +252,7 @@ npm run lint
 
 ## 📚 API Documentation
 
-Truy cập Swagger UI tại: `http://https://movie-streaming-v2-be.onrender.com/api-docs`
+Truy cập Swagger UI tại: `https://movie-streaming-v2-be.onrender.com/api-docs`
 
 **Các endpoint chính:**
 

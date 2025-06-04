@@ -270,7 +270,7 @@ const MovieCategory = ({ title, endpoint, showTopMovies = true }) => {
       setLoading(true);
       // Gọi API phân trang với page và limit
       const response = await fetch(
-        `http://https://movie-streaming-v2-be.onrender.com/api/movies?page=${pageNumber}&limit=${limit}`
+        `https://movie-streaming-v2-be.onrender.com/api/movies?page=${pageNumber}&limit=${limit}`
       );
       const result = await response.json();
 
@@ -318,7 +318,7 @@ const MovieCategory = ({ title, endpoint, showTopMovies = true }) => {
     try {
       // Fetch recent movies from the database sorted by both view count and date
       // Using days=3 to only show movies from the last 3 days
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movie-views/most-viewed?days=1&limit=10&sort=createdAt`);
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movie-views/most-viewed?days=1&limit=10&sort=createdAt`);
 
       if (!response.ok) {
         throw new Error('Failed to fetch most viewed movies');
@@ -352,7 +352,7 @@ const MovieCategory = ({ title, endpoint, showTopMovies = true }) => {
       } else {
         console.error('Invalid data format from most-viewed API:', result);
         // Fallback to regular movies API if most-viewed endpoint fails
-        const fallbackResponse = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies?limit=10&sort=-createdAt`);
+        const fallbackResponse = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies?limit=10&sort=-createdAt`);
         const fallbackResult = await fallbackResponse.json();
 
         if (fallbackResult.data && fallbackResult.data.movies) {
@@ -378,7 +378,7 @@ const MovieCategory = ({ title, endpoint, showTopMovies = true }) => {
       console.error('Error fetching most viewed movies:', error);
       // Try to get regular movies as a fallback
       try {
-        const fallbackResponse = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies?limit=10&sort=-createdAt`);
+        const fallbackResponse = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies?limit=10&sort=-createdAt`);
         const fallbackResult = await fallbackResponse.json();
 
         if (fallbackResult.data && fallbackResult.data.movies) {
@@ -428,7 +428,7 @@ const MovieCategory = ({ title, endpoint, showTopMovies = true }) => {
   const fetchPublicUpcomingMovies = async () => {
     try {
       // Đây có thể là một API endpoint công khai khác nếu bạn có
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/movies/upcoming?limit=10`);
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/movies/upcoming?limit=10`);
       const data = await response.json();
 
       if (data.success && data.movies) {

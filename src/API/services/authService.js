@@ -1,5 +1,5 @@
 // Auth Service API functions
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://https://movie-streaming-v2-be.onrender.com/api"; // Update với URL đầy đủ của API
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://movie-streaming-v2-be.onrender.com/api"; // Update với URL đầy đủ của API
 
 // Thêm xử lý lỗi tốt hơn và kiểm tra API URL
 const checkApiConnection = async () => {

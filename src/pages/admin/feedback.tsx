@@ -145,7 +145,7 @@ const FeedbackPage = () => {
         params.sortOrder = sortOrder;
       }
       // Gọi API lấy danh sách feedback
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await axios.get(`${baseUrl}/feedback`, {
         params,
         headers: { Authorization: `Bearer ${token}` }
@@ -170,7 +170,7 @@ const FeedbackPage = () => {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
 
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await axios.get(`${baseUrl}/feedback/stats`, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -237,7 +237,7 @@ const FeedbackPage = () => {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
 
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await axios.delete(`${baseUrl}/feedback/${feedbackToDelete}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -277,7 +277,7 @@ const FeedbackPage = () => {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
 
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const response = await axios.patch(`${baseUrl}/feedback/${id}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }

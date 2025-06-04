@@ -322,7 +322,7 @@ const AdminPremiumPage: NextPageWithLayout<AdminPremiumPageProps> = () => {
           });
 
           // Try to send test request with token
-          const testResponse = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
+          const testResponse = await fetch('https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
             headers: {
               'Authorization': `Bearer ${testToken}`
             }
@@ -604,7 +604,7 @@ const AdminPremiumPage: NextPageWithLayout<AdminPremiumPageProps> = () => {
       console.log(`Attempting to approve subscription: ${subscriptionId}`);
 
       // Sửa đường dẫn API endpoint để phù hợp với backend
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/approve/${subscriptionId}`, {
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/subscription/admin/approve/${subscriptionId}`, {
         method: 'POST', // Đảm bảo phương thức là POST
         headers: {
           'Authorization': `Bearer ${testToken}`,
@@ -698,7 +698,7 @@ const AdminPremiumPage: NextPageWithLayout<AdminPremiumPageProps> = () => {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/reject/${subscriptionId}`, {
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/subscription/admin/reject/${subscriptionId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${testToken}`,
@@ -786,7 +786,7 @@ const AdminPremiumPage: NextPageWithLayout<AdminPremiumPageProps> = () => {
       console.log(`Attempting to cancel subscription with ID: ${subscriptionId}`);
 
       // Đường dẫn API cần có dấu slash ở đầu để đảm bảo đường dẫn hoàn chỉnh
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/cancel/${subscriptionId}`, {
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/subscription/admin/cancel/${subscriptionId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${testToken}`,
@@ -854,7 +854,7 @@ const AdminPremiumPage: NextPageWithLayout<AdminPremiumPageProps> = () => {
       const toastId = toast.loading('Đang tải thông tin người dùng...');
 
       // Gọi API để lấy thông tin chi tiết của người dùng
-      const response = await fetch(`http://https://movie-streaming-v2-be.onrender.com/api/admin/users/${userId}`, {
+      const response = await fetch(`https://movie-streaming-v2-be.onrender.com/api/admin/users/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

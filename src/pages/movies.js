@@ -211,7 +211,7 @@ const Movies = () => {
       }
 
       // Use the /api/search endpoint
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api';
       const searchUrl = `${apiUrl}/search`;
 
       // Build query parameters for the search endpoint

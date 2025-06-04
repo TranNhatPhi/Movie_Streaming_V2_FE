@@ -47,7 +47,7 @@ const AdminSidebar = () => {
         const token = localStorage.getItem('auth_token');
         if (!token) return;
 
-        const response = await axios.get('http://https://movie-streaming-v2-be.onrender.com/api/feedback/unread/count', {
+        const response = await axios.get('https://movie-streaming-v2-be.onrender.com/api/feedback/unread/count', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -75,7 +75,7 @@ const AdminSidebar = () => {
 
         // Thay vì gọi API /pending-count (đang bị lỗi), sử dụng API /pending-subscriptions
         // và đếm số lượng từ kết quả trả về
-        const response = await fetch('http://https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
+        const response = await fetch('https://movie-streaming-v2-be.onrender.com/api/subscription/admin/pending-subscriptions', {
           headers: {
             'Authorization': `Bearer ${token}`
           }

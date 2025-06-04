@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ message: 'Invalid email format' });
     }    // Send request to backend API using axios for consistency
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL || 'http://https://movie-streaming-v2-be.onrender.com/api'}/auth/forgot-password`,
+      `${process.env.NEXT_PUBLIC_API_URL || 'https://movie-streaming-v2-be.onrender.com/api'}/auth/forgot-password`,
       { email }
     );
 

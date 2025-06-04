@@ -7,7 +7,7 @@ const ReportButton = ({ movieId }) => {
 
   const handleSubmit = async () => {
     try {
-      await fetch('http://https://movie-streaming-v2-be.onrender.com/api/movies/report', {
+      await fetch('https://movie-streaming-v2-be.onrender.com/api/movies/report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
