@@ -21,7 +21,7 @@
 /build
 
 # config files with sensitive information
-next.config.js
+# next.config.js
 
 # misc
 .DS_Store
